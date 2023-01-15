@@ -6,9 +6,9 @@ var docInit;
 export default function Home() {
   const [doc, setdoc] = useState();
 
-  useEffect(() => {
-    document.location.replace("https://go.hotmart.com/D78475892K");
-  });
+  // useEffect(() => {
+  //   document.location.replace("https://go.hotmart.com/D78475892K");
+  // });
 
   return (
     <div>
