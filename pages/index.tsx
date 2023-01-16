@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Script from "next/script";
 import { useEffect, useState } from "react";
 
 var docInit;
@@ -17,6 +18,19 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Marcos Oliveira " />
       </Head>
+      <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-EB5Y4T1K8C"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-EB5Y4T1K8C');
+          
+          `}
+      </Script>
       <div className="flex justify-center items-center">
         <div className="grid grid-cols-1 md:grid-cols-2 w-[1000px] shadow shadow-lg rounded-3xl">
           <div className="md:hidden">
